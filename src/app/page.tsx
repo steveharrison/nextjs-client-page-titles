@@ -6,13 +6,15 @@ import { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
+    // Title is "Layout title"
     setTimeout(() => {
-      document.title = "Messages (3)";
-    }, 100);
+      document.title = "Client page title";
+    }, 1);
   }, []);
 
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+      {/* This appears briefly and then the title gets reset to "Layout title". */}
       <title>Testing</title>
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <Image
